@@ -1,9 +1,28 @@
  # Contact PEPTI
  
-<!-- Begin Constant Contact Active Forms -->
-<script> var _ctct_m = "1ab516a3def5bdc8e1bf1b9847c0d733"; </script>
-<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
-<!-- End Constant Contact Active Forms -->
+ <form name="contact" method="POST" data-netlify="true">
+    <p>
+        <label>Your Name: <input type="text" name="name" required/></label>
+    </p>
+    <p>
+        <label>Your Email: <input type="email" name="email" required/></label>
+    </p>                
+    <p>
+        <label>Message: <textarea name="message"></textarea></label>
+    </p>
+    <fieldset>
+    <legend>I would like to recieve email updates?</legend>
+    <p>
+      <label>
+        <input type="radio" name="receiveEmails" value="Yes"> Yes
+      </label>
+    </p>
+    
+  </fieldset>
+    <p>
+        <button type="submit">Send</button>
+    </p>
+</form>
 
 <style>
 input[type=text],input[type='email'], textarea {
