@@ -11,7 +11,7 @@
         <label>Message: <textarea name="message"></textarea></label>
     </p>
     <fieldset>
-    <legend>I would like to recieve email updates?</legend>
+    <legend>I would like to recieve our newsletter?</legend>
     <p>
       <label>
         <input type="radio" name="receiveEmails" value="Yes"> Yes
