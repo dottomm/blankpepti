@@ -1,0 +1,22 @@
+---
+import SideNavButton from './SideNavButton.astro';
+
+import FocusNav from '../data/FocusAreaNav.json';
+
+export interface Props {
+	title: string;
+	body: string;
+  source:string;
+	href: string;
+}
+---
+
+<div slot="sidenav" class='sidenav'>
+
+      {FocusNav.map(menu => (
+
+          <SideNavButton href={menu.href} title={menu.title} body={menu.body} source={menu.source} />
+        
+        ))}
+
+  </div>

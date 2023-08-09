@@ -1,0 +1,55 @@
+--- 
+
+import Head from '../components/Head.astro';
+import Navigation from '../components/Navigation.astro';
+
+import SideBar from '../components/SideBar.astro';
+import Footer from '../components/Footer.astro'
+
+
+---
+
+<Head title="PEPTI Project"/>
+	<body>
+			<Navigation />
+    <div class="content">
+		<div class="layout-container">
+			<main>
+			<slot />    
+		</main>
+		
+		<aside>
+			
+			<slot name='sideslot'>
+			
+			
+		  </aside>
+		</div>
+	</div>
+		<Footer />
+	</body>
+</html>
+
+<style>
+
+.layout-container {
+    
+    display: grid;
+    grid-template-columns: auto 15%;
+    /*grid-template-columns: auto 300px;*/
+    grid-column-gap: 12px;
+ }
+  
+main {
+        background-color: var(--AliceBlue);
+    flex: 3;
+    box-shadow: 10px 10px 25px rgb(218, 215, 215);
+}
+aside {
+    flex: 1;
+    overflow: display;
+	
+    }
+
+</style>
+

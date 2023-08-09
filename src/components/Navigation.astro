@@ -1,0 +1,215 @@
+---
+ import logo from '/images/logo.png';
+
+---
+<div id='skip' class='skip'><a class='skip2content' aria-label='skip to contnet' href='#content'></a></div>
+
+  <div class="header">
+    <div class="logo">
+      <!--<a href="/index.html" aria-label="PEPTI Home" title="PEPTI Home">
+      <img class='imgLogo' src={logo} alt="PEPTI"  /> 
+     </a> -->
+     
+    </div>
+    
+    <!--Nav Bar Responsive -->
+    
+    <nav class="navbar" aria-label='main navigation'>
+      <div class="menu-toggle">
+        <div class="hamburger">
+        </div>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="/index.html" aria-label="home" title="home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about" aria-label="About" title="About">About</a></li>
+        <!-- 
+          <li class="nav-item"><a class="nav-link" href="/resourceGuide" aria-label="Resource Guide" title="Resource Guide">Resource Guide</a></li>
+        -->        
+        <div class="dropdown">
+          <li class="nav-item"> <a class="nav-link" href="#" aria-expanded="false">Focus Areas</a> 
+          </li>
+          <div class="dropdown-content">
+            <a class="nav-link" href="/inclusion">Focus Area One: Inclusion</a>
+            <a class="nav-link" href="/transition">Focus Area Two: Transition</a>
+            <a class="nav-link" href="/taskforce">Focus Area Three: Taskforce</a>
+          </div>
+          </div>
+          <li class="nav-item"><a class="nav-link" href="/staff" aria-label="PEPTI Team" title="PEPTI Team">PEPTI Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="/caspdg" aria-label="CASPDG Grant" title="CASDPG Grant">CASPDG Grant</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact" aria-label="Contact PEPTI" title="Contact PEPTI">Contact Us</a></li>
+        
+      </ul>
+    </nav>
+
+  </div>
+
+<a data-name='content' id='content'></a>
+
+
+<style>
+  /* Header */
+
+.header {
+  height: 80px;
+  background: #fff;
+  box-shadow: 4px 5px 15px rgb(218, 215, 215);
+  margin-bottom:1em;
+}
+
+.header .container {
+  height: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  padding:0 20px;
+}
+
+.header img {
+  width: 70px;
+height: auto;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  font-size: small;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: var(--PolynesianBlue);
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  width: 250px;
+}
+.dropdown:hover .dropdown-content {display: block;}
+
+
+.navbar {
+width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+
+}
+.navbar-brand {
+  color: var(--SaftyOrange);
+  text-transform: uppercase;
+}
+.nav-list {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 50vh;
+  background-color: #fff;
+  opacity: .9;
+  padding-left:1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1250;
+  text-transform: uppercase;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  font-size: .8em;
+}
+.nav-link:hover {
+  border-bottom: 3px solid var(--PolynesianBlue);
+}
+
+.active {
+  font-weight: 700;
+  border-bottom: 3px solid var(--PolynesianBlue);
+}
+.open .nav-list {
+  transform: translateX(0);
+}
+.menu-toggle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.hamburger {
+  width: 2.4rem;
+  height: 3px;
+  
+  background-color: var(--PolynesianBlue);
+  border-radius: 2px;
+  border: none;
+  transition: all 0.7s ease-out;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 2.4rem;
+  height: 3px;
+  background-color: var(--PolynesianBlue);
+  border: none;
+}
+.hamburger::before {
+  transform: translateY(-8px);
+}
+.hamburger::after {
+  transform: translateY(8px);
+}
+.open .hamburger {
+  background: #000;
+}
+.open .hamburger::before {
+  transform-origin: (0, 0);
+  transform: rotate(45deg);
+}
+.open .hamburger::after {
+  transform-origin: (0, 0);
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 1046px) {
+  .nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: #fff;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+  }
+  .nav-link {
+    margin-left: 1rem;
+    transition: all 0.5s;
+  }
+  .menu-toggle {
+    display: none;
+  }
+}
+</style>
+
+
+<script>
+  const navbar = document.querySelector(".navbar");
+  const menuToggle = document.querySelector(".menu-toggle");
+  menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("open");
+  });</script>

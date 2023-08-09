@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import { getEntryBySlug } from "astro:content";
+const entry = await getEntryBySlug("staff", "index");
+import SideBar from '../components/SideBar.astro';
+const { staff, name,title, image, description } = entry.data;
+---
+
+<Layout title='staff' >
+  <section class="sectionStaffHead">
+    <h1> {title} </h1>
+    <CTAButton title="Get Involved" href="/contact" body="Get Involved! Join Our Team" />
+  </section>
+  <section class="staff">
+    <div class="container">
+      <div class="staffWrapper">
+        {
+          staff?.map((staff) => (
+            <div class="col-12 mt-6 md:col-6">
+              <div class="">
+                
+                <img src={staff.image} alt={staff.name}/>
+                
+                  <h4>{staff.name} </h4>
+                  <div class="nameTitle">
+                <p>{staff.title}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <div slot="sideslot">
+    <SideBar />
+
+  </div>
+</Layout>
+
+<style>
+  .staffWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .staffWrapper > div{
+    width:300px;
+    justify-content: center;
+    flex-basis: auto;
+
+  }
+  .nameTitle{
+    margin-top:-48px;
+    font-size: .69em;
+  }
+</style>

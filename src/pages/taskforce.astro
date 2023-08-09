@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/LayoutAside.astro';
+import mdx from '@astrojs/mdx';
+import SideBar from '../components/SideBar.astro';
+import { getEntryBySlug } from "astro:content";
+const entry = await getEntryBySlug("taskforce", "index");
+const { staff, name,title, image, description } = entry.data;
+import {Content as TaskforceFocus} from '../content/taskforce/index.md';
+---
+<Layout title="Taskforce">
+    <section class="sectionTaskforceHead">
+        <h1>Taskforce</h1>
+    </section>
+    <section class='sectionTaskforce'>
+        <TaskforceFocus />
+        </section>
+
+        <div slot="sideslot">
+            <SideBar title="PEPTI" href="#" body="" source=""/>
+
+            
+          </div>

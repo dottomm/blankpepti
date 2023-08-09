@@ -1,0 +1,308 @@
+:root {
+    --PolynesianBlue: #054A91;
+    --SteelBlue: #3E7CB1;
+    --VistaBlue: #81A4CD;
+    --AliceBlue: #DBE4EE;
+    --SaftyOrange: #F17300;
+  }
+
+
+    @font-face {
+        font-family: 'Assistant';
+        src: url('/fonts/Assistant/Assistant-VariableFont_wght.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-weight: 1 999;
+    
+    }
+  
+
+body {
+	font-size: 1.53em;
+    line-height: 1.7em;
+    margin: 0;
+    padding:0;
+	font-family:Assistant,REM, san-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;  
+}
+.keyNav{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: .7em;
+    height: 42px;
+    background-color: #fff;
+    color:#fff;
+    display: none;
+    border:2px solid green;
+
+  }
+
+  .keyNav > *{
+    margin-top:-2px;
+    margin-right: 1.5em;;
+
+  }
+  
+
+nav a:link{
+    color: var(--PolynesianBlue);
+}
+
+nav a:visited{
+    color: var(--PolynesianBlue);
+}
+
+nav a:hover{
+    color:var(--SaftyOrange);
+    
+}
+
+.nav-item{
+    font-weight: 700;
+    font-size: .7em;
+}
+
+h1, h2,h3 {
+    color:#fff;
+    font-weight: 600;
+}
+
+.content{
+    font-weight: 300;
+    margin:0 10%;
+    min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    max-width: 1600px;
+    }
+.CenterTitle{
+    text-align: center;
+    padding-bottom:1.2em;
+    border-bottom:1px solid var(--VistaBlue);
+
+}
+aside{
+    box-sizing: content-box;
+    padding: 0px 0px 0 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+
+
+aside h2{
+        color:var(--SteelBlue);
+        font-weight: 500;
+        font-size: .9em;
+    }
+
+section{
+    min-height: 360px;
+    padding:2em;
+    width: 100%;
+    box-sizing:border-box;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 10px 5px 5px rgb(218, 215, 215);
+    }
+
+.sectiontop{
+    border-radius: 10px 10px 0px 0px;
+    position: relative;
+    background-image: url('/images/blue-radial.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;    
+}    
+
+.sectiontop p{
+    max-width: 52ch;
+}
+
+.sectiontwo{
+    background-color:var(--SaftyOrange);
+    color:#fff;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.sectionCards{
+    background-image: url('/images/colorhands.webp');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionCards h1{
+    color:var(--AliceBlue);
+}
+
+.sectionInclusionHead{
+    border-radius: 10px 10px 0px 0px;
+
+    background-color: var(--SteelBlue);
+    background-image: url('/images/blue-radial-children.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;  
+    
+}
+.sectionInclusionHead h1{
+    font-size: 4.3em;
+    
+}
+.sectionInclusion{
+    background-color: var(--SteelBlue);
+    border-radius: 0px 0px 10px 10px;
+    color:var(--AliceBlue);
+}
+
+.sectionTransitionHead{
+    border-radius: 10px 10px 0px 0px;
+
+    background-color: var(--SteelBlue);
+    background-image: url('/images/blue-radial-surprised.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;  
+    
+}
+.sectionTransitionHead h1{
+    font-size: 4.3em;
+}
+.sectionTransition{
+    background-color: var(--SteelBlue);
+    border-radius: 0px 0px 10px 10px;
+    color:var(--AliceBlue);
+}
+
+.sectionTaskforceHead{
+    border-radius: 10px 10px 0px 0px;
+
+    background-color: var(--SteelBlue);
+    background-image: url('/images/blue-radial-blocks.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;  
+}
+.sectionTaskforceHead h1{
+    font-size: 4.3em;
+
+}
+.sectionTaskforce{
+    background-color: var(--SteelBlue);
+    border-radius: 0px 0px 10px 10px;
+    color:var(--AliceBlue);
+
+}
+
+.sectionStaffHead{
+    background-image: url('/images/radial-blue-phone.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;  
+}
+.sectionStaffHead h1{
+    font-size: 4.3em;
+    line-height: 125%;
+}
+
+.about{
+    background-color: var(--SteelBlue);
+    background-image: url(/images/verticalHands.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    color:#fff;
+}
+
+.about p{
+    width: 52ch;
+}
+
+.about h2{
+    color:#fff;
+}
+
+.caspdg{
+    background-color: var(--SteelBlue);
+    color:#fff;
+}
+
+.sectionContact{
+    background-color: var(--PolynesianBlue);
+    color:#fff;
+    border-radius: 1px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card-wrapper{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-sizing: content-box;
+}
+
+.card-wrapper > div{
+    margin-bottom:6px;
+        flex-grow: 1;
+    }
+    
+footer{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:0 2%;
+    background-color:var();
+    color:#000;
+}
+
+.sidenav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+
+
+.sidenav > *{
+    width:100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom:14px;
+}
+
+
+.CDELogos {
+    display:flex;
+    flex-flow: row wrap;
+    width:auto;
+    height:auto;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+.CDELogos > div{
+width: 140px;
+}    
+
+.CDELogos img{
+    width:140px;
+}
+
+  footer p{
+    text-align: center;
+}

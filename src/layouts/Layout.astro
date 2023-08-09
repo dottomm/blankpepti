@@ -1,39 +1,81 @@
 --- 
-interface Props {
-	title: string;
-}
 
-const { title } = Astro.props;
+import Head from '../components/Head.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
+<Head title="PEPTI"/>
+    <a href='#page-content' class='skipLink' aria-label='skip to content' title="skip to main content">skip to content</a>
+    <div class='top-container' id='top-container'>
+		<Navigation />
+        </div>
+    <div class='content'>
+        <a name="page-content"></a>
+		<div class="layout-container">
+			<main>
+				<slot />    
+			</main>
+			
+		</div>
+	</div>
+   
+		<Footer />
+    
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+
+
+<style>
+    .top-container {
+        width: 100%;
+z-index: 10000;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; 
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+.skipLink{
+    display: none;
+}
+	.layout-container {
+    
+    display: grid;
+    grid-template-columns: auto 0%;
+    /*grid-template-columns: auto 300px;*/
+    grid-column-gap: 10px;
+ }
+  
+main {
+    background-color: var(--AliceBlue);
+    flex: 3;
+    box-shadow: 10px 10px 25px rgb(218, 215, 215);
+}
+aside {
+    background-color: #F17300;
+    flex: 1;
+    overflow: display;
+    }
 </style>
+<script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("top-container");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>

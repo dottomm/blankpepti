@@ -1,0 +1,15 @@
+# California State Personnel Development Grants (SPDG)
+
+Grant Number: H323A220004
+
+The California Department of Education (CDE) and the Department of Developmental Services (DDS) propose a plan to reform California systems for personnel development in early intervention, early education, and transition services to improve results for young children with disabilities. The CA-SPDG provides professional development and job-embedded coaching to preschool and early start providers to meet four outcomes: use of evidence-based practices to support inclusion for preschoolers and cultivate trusting family partnerships during transition; improve fidelity of implementation of inclusion and transition practices; sustain and expand SPDG strategies and practices; and improve learning and developmental outcomes for all children with disabilities.
+
+The CA-SPDG is framed around the five active implementation frameworks. Based on California’s needs assessments, the CA-SPDG addresses three focus areas: Embedded Instruction Framework of Effective Practices; Family-Guided Transitions; and Interagency Collaboration and Statewide Scale up, which together represent meaningful action toward a more equitable state. The project will be managed by an experienced team at the Napa County Office of Education in collaboration with the CDE and the DDS, and in partnership with many connected agencies and initiatives. Project data will inform implementation and design to meet the intended outcomes, and progress reports will be shared frequently with educational partners.
+
+## Purpose
+
+The California Department of Education (CDE) and the Department of Developmental Services (DDS) propose a plan to reform California systems for personnel development in early intervention, early education, and transition services to improve results for young children with disabilities. The CA-SPDG provides professional development and job-embedded coaching to preschool and early start providers to meet four outcomes: use of evidence-based practices to support inclusion for preschoolers and cultivate trusting family partnerships during transition; improve fidelity of implementation of inclusion and transition practices; sustain and expand SPDG strategies and practices; and improve learning and developmental outcomes for all children with disabilities. 
+
+## Method
+
+The CA-SPDG is framed around the five active implementation frameworks. Based on California’s needs assessments, the CA-SPDG addresses three focus areas: Embedded Instruction Framework of Effective Practices; Family-Guided Transitions; and Interagency Collaboration and Statewide Scale up, which together represent meaningful action toward a more equitable state. The project will be managed by an experienced team at the Napa County Office of Education in collaboration with the CDE and the DDS, and in partnership with many connected agencies and initiatives. Project data will inform implementation and design to meet the intended outcomes, and progress reports will be shared frequently with educational partners. 

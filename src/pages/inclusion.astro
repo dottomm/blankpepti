@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/LayoutAside.astro';
+import mdx from '@astrojs/mdx';
+import SideBar from '../components/SideBar.astro';
+import { getEntryBySlug } from "astro:content";
+const entry = await getEntryBySlug("inclusion", "index");
+const { staff, name,title, image, description } = entry.data;
+import {Content as InclusionFocus} from '../content/inclusion/index.md';
+---
+<Layout title="Inclusion">
+<section class='sectionInclusionHead'>
+
+<h1> Inclusion</h1>
+   
+</section>
+<section class="sectionInclusion">
+  <h2> Focus Area 1:  Embedded Instruction Framework of Effective Practices</h2>
+
+<InclusionFocus />
+</section>
+<div slot="sideslot">
+    <SideBar title="PEPTI" body="PEPTI" source="PEPTI" href="#"/>
+    
+  </div>
+</Layout>

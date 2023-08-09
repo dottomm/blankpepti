@@ -1,0 +1,16 @@
+[
+  
+    {
+      "title":"Focus Area One: Inclusion",
+      "href": "/inclusion"
+    },
+    {
+        "title":"Focus Area Two: Transition",
+        "href":"/transition"
+        
+    },
+    {
+        "title":"Focus Area Three: Taskforce",
+        "href":"/taskforce"
+    }
+]
