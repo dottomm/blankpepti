@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CTAButton from '../components/CTAButton.astro';
+
 import { getEntryBySlug } from "astro:content";
 const entry = await getEntryBySlug("about", "index");
 const { title,body } = entry.data;
@@ -9,6 +11,7 @@ import {Content as AboutContent} from '../content/about/index.md';
     <main>
        
     <section class="about" id="about">
+ 
         <AboutContent />
         
     </section>

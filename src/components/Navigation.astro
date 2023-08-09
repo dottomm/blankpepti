@@ -1,16 +1,17 @@
 ---
- import logo from '/images/logo.png';
+ import logo from '../images/PEPTILOGO-smaller.png';
 
 ---
 <div id='skip' class='skip'><a class='skip2content' aria-label='skip to contnet' href='#content'></a></div>
 
   <div class="header">
+    <div class="container">
     <div class="logo">
-      <!--<a href="/index.html" aria-label="PEPTI Home" title="PEPTI Home">
-      <img class='imgLogo' src={logo} alt="PEPTI"  /> 
-     </a> -->
-     
+      <a href="/index.html" aria-label="PEPTI Home" title="PEPTI Home">
+      <img class='imgLogo' src={logo} alt="PEPTI" /> 
+     </a> 
     </div>
+    
     
     <!--Nav Bar Responsive -->
     
@@ -40,7 +41,8 @@
         
       </ul>
     </nav>
-
+    
+  </div>
   </div>
 
 <a data-name='content' id='content'></a>
@@ -50,7 +52,7 @@
   /* Header */
 
 .header {
-  height: 80px;
+  height: 70px;
   background: #fff;
   box-shadow: 4px 5px 15px rgb(218, 215, 215);
   margin-bottom:1em;
@@ -59,13 +61,13 @@
 .header .container {
   height: 100%;
   display: flex;
-  align-items: baseline;
-  justify-content: flex-start;
-  padding:0 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.header img {
-  width: 70px;
+.header img {  
+  width:170px;
 height: auto;
 }
 
@@ -98,11 +100,8 @@ height: auto;
 
 
 .navbar {
-width: 100%;
   display: flex;
-  justify-content: flex-start;
-  overflow: hidden;
-
+  justify-content: space-between;
 }
 .navbar-brand {
   color: var(--SaftyOrange);
