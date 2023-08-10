@@ -33,6 +33,40 @@ const { staff, name,title, image, description } = entry.data;
       </div>
     </div>
   </section>
+  <section class='sectionCDE'>
+    <h2>California Department of Education</h2>
+    <div class="container">
+      <div class="staffWrapper">
+          
+          <!--BBoyd -->
+          <div >
+            <div >
+              <img src="/images/CDEBadge.png" alt="Barbara Boyd"/>
+                <h4>Barbara Boyd, Ed.D.  </h4>
+                <div class="nameTitle">
+                <p>Education Administrator I <br />
+                  Early Childhood Support Unit Special Education Division California Department of Education </p>
+                </div>
+            </div>
+          </div>
+          <!--End BBoyd -->
+
+      <!--JLosh -->
+      <div >
+        <div >
+            <img src="/images/CDEBadge.png" alt="Jessica Wolsh	"/>
+            <h4>Jessica Losh	 </h4>
+              <div class="nameTitle">
+                <p>Child Development Consultant <br /> 
+                  Inclusion Support Office <br /> 
+                  Early Education Division</p>
+            </div>
+        </div>
+      </div>
+      <!--End JWolsh -->
+  </div>
+</div>
+  </section>
   <div slot="sideslot">
     <SideBar />
 
@@ -42,19 +76,22 @@ const { staff, name,title, image, description } = entry.data;
 <style>
   .staffWrapper{
     display: flex;
+ 
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    line-height:100%;
   }
 
-  .staffWrapper > div{
-    width:300px;
-    justify-content: center;
-    flex-basis: auto;
-
+ 
+  .staffWrapper > div {
+    width:250px;
+    text-align:center;
+    margin:1.5em;
+    color:var(--PolynesianBlue);
   }
   .nameTitle{
-    margin-top:-48px;
     font-size: .69em;
+    line-height:130%;
   }
 </style>
