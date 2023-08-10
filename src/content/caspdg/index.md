@@ -1,4 +1,4 @@
-# California State Personnel Development Grants (SPDG)
+# California State Personnel Development Grants (CASPDG)
 
 Grant Number: H323A220004
 
