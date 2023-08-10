@@ -6,7 +6,7 @@ The aim is to foster interagency collaboration through a joint task force betwee
 
 <h2 class='CenterTitle'>Project Activities</h2>
 
-### Interagency Task force
+### Interagency Task Force
 
 Convene an interagency task force across Part B and Part C educational partners to identify existing resources, align with project goals, and establish workgroups for resource development.
 
