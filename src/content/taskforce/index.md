@@ -12,7 +12,7 @@ Convene an interagency task force across Part B and Part C educational partners 
 
 ### Resource Guide
 
-Develop an interagency Resource Guide through the Task Force for broad dissemination through the CET, DDS, and Early Start websites and listservs.
+Develop an interagency Resource Guide through the task force for broad dissemination through the CET, DDS, and Early Start websites and listservs.
 
 ### Preservice and in-service alignment
 
