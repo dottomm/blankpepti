@@ -1,4 +1,5 @@
 :root {
+    --bg-color:#fff;
     --PolynesianBlue: #054A91;
     --SteelBlue: #3E7CB1;
     --VistaBlue: #81A4CD;
@@ -18,6 +19,7 @@
   
 
 body {
+    background-color: var(--bg-color);
 	font-size: 1.53em;
     line-height: 1.7em;
     margin: 0;
@@ -47,7 +49,9 @@ body {
 
   }
   
-
+header{
+    background-color: var(--bg-color);
+}
 nav a:link{
     color: var(--PolynesianBlue);
 }
@@ -72,6 +76,7 @@ h1, h2,h3 {
 }
 
 .content{
+    
     font-weight: 300;
     margin:0 10%;
     min-height: 100%;
@@ -117,6 +122,13 @@ section{
 .sectionCDE h2{
     color: var(--PolynesianBlue);
 }
+.sectionStatewide{
+    background-color: var(--AliceBlue);
+}
+.sectionStatewide h2{
+    color: var(--PolynesianBlue);
+
+}
 .sectiontop{
     border-radius: 10px 10px 0px 0px;
     position: relative;
@@ -127,7 +139,7 @@ section{
 }    
 
 .sectiontop p{
-    max-width: 52ch;
+    max-width: 60%;
 }
 
 .sectiontwo{
@@ -229,7 +241,7 @@ section{
 }
 
 .about p{
-    width: 52ch;
+    width: 52%;
 }
 
 .about h2{

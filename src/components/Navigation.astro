@@ -1,6 +1,7 @@
 ---
  import logo from '/images/PEPTILOGO-smaller.png';
 
+ 
 ---
 <div id='skip' class='skip'><a class='skip2content' aria-label='skip to contnet' href='#content'></a></div>
 
@@ -21,7 +22,7 @@
         </div>
       </div>
       <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="/index.html" aria-label="home" title="home">Home</a></li>
+        <li class="nav-item"><a class="nav-link {currentPath === '' ? 'active' : ''} " href="/index.html" aria-label="home" title="home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/about/" aria-label="About" title="About">About</a></li>
         <!-- 
           <li class="nav-item"><a class="nav-link" href="/resourceGuide" aria-label="Resource Guide" title="Resource Guide">Resource Guide</a></li>
@@ -32,7 +33,7 @@
           <div class="dropdown-content">
             <a class="nav-link" href="/inclusion/">Focus Area One: Inclusion</a>
             <a class="nav-link" href="/transition/">Focus Area Two: Transition</a>
-            <a class="nav-link" href="/taskforce/">Focus Area Three: Taskforce</a>
+            <a class="nav-link" href="/taskforce/">Focus Area Three: Task Force</a>
           </div>
           </div>
           <li class="nav-item"><a class="nav-link" href="/staff/" aria-label="PEPTI Team" title="PEPTI Team">PEPTI Team</a></li>
@@ -71,7 +72,10 @@
 height: auto;
 }
 
-
+#navbar li a.current{
+   color: #ffffff;
+   background:#f1d74c;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -212,3 +216,4 @@ height: auto;
   menuToggle.addEventListener("click", () => {
   navbar.classList.toggle("open");
   });</script>
+

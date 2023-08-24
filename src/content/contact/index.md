@@ -11,7 +11,7 @@
         <label>Message: <textarea name="message"></textarea></label>
     </p>
     <fieldset>
-    <legend>I would like to recieve our newsletter?</legend>
+    <legend>I'd like to receive emails from PEPTI with the latest resources, upcoming events,  and career opportunities.</legend>
     <p>
       <label>
         <input type="radio" name="receiveEmails" value="Yes"> Yes

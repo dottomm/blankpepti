@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CTAButton from '../components/CTAButton.astro';
+import SideBar from '../components/SideBar.astro';
+
 import { getEntryBySlug } from "astro:content";
 const entry = await getEntryBySlug("staff", "index");
-import SideBar from '../components/SideBar.astro';
-const { staff, name,title, image, description } = entry.data;
+const {cde, staff, cdestaff,  title, team, implementation  } = entry.data;
+
 ---
 
 <Layout title='staff' >
@@ -12,11 +14,10 @@ const { staff, name,title, image, description } = entry.data;
     <h1> {title} </h1>
     <CTAButton title="Get Involved" href="/contact" body="Get Involved! Join Our Team" />
   </section>
-  <section class="staff">
+  <section class="staff" id='staff'>
     <div class="container">
       <div class="staffWrapper">
-        {
-          staff?.map((staff) => (
+        {staff?.map((staff) => (
             <div class="col-12 mt-6 md:col-6">
               <div class="">
                 
@@ -33,44 +34,62 @@ const { staff, name,title, image, description } = entry.data;
       </div>
     </div>
   </section>
-  <section class='sectionCDE'>
-    <h2>California Department of Education</h2>
+  <section class='sectionStatewide' id="sectionStatewide">
+    <h2>{implementation.title}</h2>
     <div class="container">
       <div class="staffWrapper">
-          
-          <!--BBoyd -->
-          <div >
-            <div >
-              <img src="/images/CDEBadge.png" alt="Barbara Boyd"/>
-                <h4>Barbara Boyd, Ed.D.  </h4>
-                <div class="nameTitle">
-                <p>Education Administrator I <br />
-                  Early Childhood Support Unit Special Education Division California Department of Education </p>
+        {team?.map((team)=> (
+          <div class="col-12 mt-6 md:col-6">
+              <div class="">
+                
+                <img src={team.image} alt={team.name}/>
+                
+                  <h4>{team.name} </h4>
+                  
+                  <div class="nameTitle">
+                    {team.titlename}
+                  
                 </div>
+              </div>
             </div>
-          </div>
-          <!--End BBoyd -->
-
-      <!--JLosh -->
-      <div >
-        <div >
-            <img src="/images/CDEBadge.png" alt="Jessica Wolsh	"/>
-            <h4>Jessica Losh	 </h4>
-              <div class="nameTitle">
-                <p>Child Development Consultant <br /> 
-                  Inclusion Support Office <br /> 
-                  Early Education Division</p>
-            </div>
-        </div>
+        ))}
       </div>
-      <!--End JWolsh -->
-  </div>
-</div>
+    </div>
   </section>
+  
+  <section class='sectionCDE' id='sectionCDE'>
+    <h2>{cde.title}</h2>
+    <div class="container">
+      <div class="staffWrapper">
+        {cdestaff?.map((cdestaff) => ( 
+            <div class="">
+              <div class="">
+                
+                <img src={cdestaff.image} alt={cdestaff.name}/>
+                
+                  <h4>{cdestaff.name} </h4>
+                 
+                  <div class="nameTitle">
+                    {cdestaff.title.map((item) => (
+                    <div>{item.titlename}</div>
+                    ))}
+                </div>
+
+              </div>
+            </div>
+        ))
+        }
+      
+    </div>
+  </div>
+</section>
+
   <div slot="sideslot">
+
     <SideBar />
 
-  </div>
+    </div>
+
 </Layout>
 
 <style>
