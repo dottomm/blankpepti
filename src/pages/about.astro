@@ -1,21 +1,96 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CTAButton from '../components/CTAButton.astro';
+import SideBar from '../components/SideBar.astro';
 
 import { getEntryBySlug } from "astro:content";
 const entry = await getEntryBySlug("about", "index");
-const { title,body } = entry.data;
-import {Content as AboutContent} from '../content/about/index.md';
+const {cde, staff, cdestaff,  title, NCOEtitle  } = entry.data;
+
 ---
-<Layout title="About PEPTI">
-    <main>
-       
-    <section class="about" id="about">
+
+<Layout title='staff' >
+  <section class="sectionStaffHead">
+    <h1> {title} </h1>
+    <CTAButton title="Get Involved" href="/contact" body="Get Involved! Join Our Team" />
+  </section>
+
+  <section class="staff" id='staff'>
+    <div class="container">
+      <p>The PEPTI project is a collaboration between the California Department of Education (CDE) Special Education Division (SED) and Early Education Division (EED) and the Department of Developmental Services (DDS). The Napa County Office of Education’s (NCOE) Research and Professional Development Center is responsible for facilitating the project. </p>
+      <h2>{NCOEtitle}</h2>
+
+      <div class="staffWrapper">
+        {staff?.map((staff) => (
+            <div class="col-12 mt-6 md:col-6">
+              <div class="">
+                
+                <img src={staff.image} alt={staff.name}/>
+                
+                  <h4>{staff.name} </h4>
+                  <div class="nameTitle">
+                    <p>{staff.title}</p>
+                  </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
  
-        <AboutContent />
-        
-    </section>
-    </main>
+  
+  <section class='sectionCDE' id='sectionCDE'>
+    <h2>{cde.title}</h2>
+    <div class="container">
+      <div class="staffWrapper">
+        {cdestaff?.map((cdestaff) => ( 
+            <div class="">
+              <div class="">
+                
+                <img src={cdestaff.image} alt={cdestaff.name}/>
+                
+                  <h4>{cdestaff.name} </h4>
+                 
+                  <div class="nameTitle">
+                    {cdestaff.title.map((item) => (
+                    <div>{item.titlename}</div>
+                    ))}
+                </div>
+
+              </div>
+            </div>
+        ))
+        }
+      
+    </div>
+  </div>
+</section>
+
 
 
 </Layout>
+
+<style>
+  .staffWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    line-height:100%;
+    color:var(--PolynesianBlue);
+  }
+
+ 
+  .staffWrapper > div{
+    width:250px;
+    text-align:center;
+    margin:1.5em;
+
+  }
+  
+  .nameTitle{
+    font-size: .69em;
+    line-height:132%;
+  }
+</style>
