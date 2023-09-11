@@ -221,6 +221,10 @@ section{
 
 }
 
+.staff h2{
+    color:var(--PolynesianBlue);
+}
+
 .sectionStaffHead{
     background-image: url('/images/radial-blue-phone.png');
     background-repeat: no-repeat;
