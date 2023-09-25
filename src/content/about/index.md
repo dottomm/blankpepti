@@ -29,13 +29,15 @@ staff:
     title: Technolgy Manager
     image: '/images/tom.webp'
 
-  - name: Debbie McBee
+  - name: Debbie McBee, M.A.
     title: Statewide Implementation Coach
     image: '/images/debBee.webp'
+    url: /mcbee
   
   - name: Angelia Ochoa
     title: Statewide Implementation Coach
-    image: '/images/CDEBadge.png'
+    image: '/images/ochoa.webp'
+    url: /angeliaOchoa
 
   
 

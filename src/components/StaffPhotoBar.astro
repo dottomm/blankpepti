@@ -1,0 +1,22 @@
+---
+import { getEntryBySlug } from "astro:content";
+const entry = await getEntryBySlug("about", "index");
+const { staff, url  } = entry.data;
+
+---
+<div slot="sidenav" class='sidenav'>
+   <h2><a href="about">PEPTI Team</a></h2>
+{staff?.map((staff) =>(
+   <p><a href={staff.url}><img src={staff.image} width="50%"/></a><br />
+    {staff.name}</p>
+   ))}
+
+   </div>
+
+
+   <style>
+      a{
+         text-decoration: none;
+         color:var(--SteelBlue);
+      }
+   </style>

@@ -5,13 +5,17 @@
     --VistaBlue: #81A4CD;
     --AliceBlue: #DBE4EE;
     --SaftyOrange: #F17300;
+
+    --fontLight: font-weight:100;
+    --fontNormal: font-weight:normal;
+    --fontDark: font-weight:800;
   }
 
 
     @font-face {
         font-family: 'Assistant';
         src: url('/fonts/Assistant/Assistant-VariableFont_wght.ttf') format('truetype');
-        font-weight: normal;
+        /*font-weight: normal;*/
         font-style: normal;
         font-weight: 1 999;
     
@@ -327,3 +331,22 @@ width: 140px;
   footer p{
     text-align: center;
 }
+article{
+    background-color: var(--VistaBlue);
+    display: flex;
+    gap:  18px;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding:3em;
+    min-height: 100vh;
+
+  }
+
+
+  article img {
+    display: flex;
+    justify-content: center;
+    width:400px;
+  
+    
+  }
